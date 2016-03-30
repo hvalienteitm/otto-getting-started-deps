@@ -1,0 +1,125 @@
+{
+    "File": {
+        "ID": "c05a6142-0edf-d442-a8fd-39f24ba20b32",
+        "Path": "C:\\Users\\Alejandro\\Documents\\Repositorios\\Otto\\otto-getting-started-deps\\Appfile",
+        "Source": "",
+        "Application": {
+            "Name": "otto-getting-started-deps",
+            "Type": "ruby",
+            "Detect": true,
+            "Dependencies": [
+                {
+                    "Source": "github.com/hashicorp/otto/examples/mongodb"
+                }
+            ]
+        },
+        "Project": {
+            "Name": "otto-getting-started-deps",
+            "Infrastructure": "otto-getting-started-deps"
+        },
+        "Infrastructure": [
+            {
+                "Name": "otto-getting-started-deps",
+                "Type": "aws",
+                "Flavor": "simple",
+                "Foundations": [
+                    {
+                        "Name": "consul",
+                        "Config": null
+                    }
+                ]
+            }
+        ],
+        "Customization": null,
+        "Imports": null
+    },
+    "Vertices": [
+        {
+            "File": {
+                "ID": "c05a6142-0edf-d442-a8fd-39f24ba20b32",
+                "Path": "C:\\Users\\Alejandro\\Documents\\Repositorios\\Otto\\otto-getting-started-deps\\Appfile",
+                "Source": "",
+                "Application": {
+                    "Name": "otto-getting-started-deps",
+                    "Type": "ruby",
+                    "Detect": true,
+                    "Dependencies": [
+                        {
+                            "Source": "github.com/hashicorp/otto/examples/mongodb"
+                        }
+                    ]
+                },
+                "Project": {
+                    "Name": "otto-getting-started-deps",
+                    "Infrastructure": "otto-getting-started-deps"
+                },
+                "Infrastructure": [
+                    {
+                        "Name": "otto-getting-started-deps",
+                        "Type": "aws",
+                        "Flavor": "simple",
+                        "Foundations": [
+                            {
+                                "Name": "consul",
+                                "Config": null
+                            }
+                        ]
+                    }
+                ],
+                "Customization": null,
+                "Imports": null
+            },
+            "Dir": "",
+            "NameValue": "otto-getting-started-deps"
+        },
+        {
+            "File": {
+                "ID": "24cbbebc-fc41-53b4-c844-60d642fb523c",
+                "Path": "C:\\Users\\Alejandro\\Documents\\Repositorios\\Otto\\otto-getting-started-deps\\.otto\\appfile\\deps\\b80064b1b081e385b5c0cf62e2b2b3f0\\Appfile",
+                "Source": "git::https://github.com/hashicorp/otto.git//examples/mongodb",
+                "Application": {
+                    "Name": "mongodb",
+                    "Type": "docker-external",
+                    "Detect": true,
+                    "Dependencies": null
+                },
+                "Project": {
+                    "Name": "b80064b1b081e385b5c0cf62e2b2b3f0",
+                    "Infrastructure": "otto-getting-started-deps"
+                },
+                "Infrastructure": [
+                    {
+                        "Name": "otto-getting-started-deps",
+                        "Type": "aws",
+                        "Flavor": "simple",
+                        "Foundations": [
+                            {
+                                "Name": "consul",
+                                "Config": null
+                            }
+                        ]
+                    }
+                ],
+                "Customization": {
+                    "Raw": [
+                        {
+                            "Type": "app",
+                            "Config": {
+                                "image": "mongo:3.0",
+                                "run_args": "-p 27017:27017"
+                            }
+                        }
+                    ]
+                },
+                "Imports": null
+            },
+            "Dir": "C:\\Users\\Alejandro\\Documents\\Repositorios\\Otto\\otto-getting-started-deps\\.otto\\appfile\\deps\\b80064b1b081e385b5c0cf62e2b2b3f0",
+            "NameValue": "mongodb"
+        }
+    ],
+    "Edges": [
+        {
+            "0": "1"
+        }
+    ]
+}

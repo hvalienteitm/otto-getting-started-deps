@@ -1,0 +1,8 @@
+application {
+  name = "otto-getting-started-deps"
+    type = "ruby"
+
+      dependency {
+          source = "github.com/hashicorp/otto/examples/mongodb"
+	    }
+	    }
