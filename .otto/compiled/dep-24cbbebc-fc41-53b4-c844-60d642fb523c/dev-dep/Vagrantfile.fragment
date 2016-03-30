@@ -12,12 +12,12 @@ config.vm.provision "docker" do |d|
 end
 
 # Sync our own dep folder in there
-config.vm.synced_folder 'C:\Users\Alejandro\Documents\Repositorios\Otto\otto-getting-started-deps\.otto\appfile\deps\b80064b1b081e385b5c0cf62e2b2b3f0', "/otto-deps/mongodb-24cbbebc-fc41-53b4-c844-60d642fb523c"
+config.vm.synced_folder 'C:/Users/Alejandro/Documents/Repositorios/Otto/otto-getting-started-deps/.otto/appfile/deps/b80064b1b081e385b5c0cf62e2b2b3f0', "/otto-deps/mongodb-24cbbebc-fc41-53b4-c844-60d642fb523c"
 
 # Foundation configuration for dev dep
 
 dir = "/otto/foundation-mongodb-1"
-config.vm.synced_folder 'C:\Users\Alejandro\Documents\Repositorios\Otto\otto-getting-started-deps\.otto\compiled\dep-24cbbebc-fc41-53b4-c844-60d642fb523c\foundation-consul\app-dev-dep', dir
+config.vm.synced_folder 'C:/Users/Alejandro/Documents/Repositorios/Otto/otto-getting-started-deps/.otto/compiled/dep-24cbbebc-fc41-53b4-c844-60d642fb523c/foundation-consul/app-dev-dep', dir
 config.vm.provision "shell", inline: "cd #{dir} && bash #{dir}/main.sh"
 
 
