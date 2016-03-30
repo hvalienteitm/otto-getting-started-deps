@@ -21,10 +21,10 @@ Vagrant.configure("2") do |config|
   dir = "/otto/scriptpacks"
   config.vm.provision "shell", inline: "sudo rm -rf #{dir}; sudo mkdir -p #{dir}; sudo chmod 0777 #{dir}"
   
-  config.vm.provision "file", source: "C:\Users\Alejandro\Documents\Repositorios\Otto\otto-getting-started-deps\.otto\compiled\app\scriptpacks\STDLIB.tar.gz", destination: "#{dir}/STDLIB.tar.gz"
+  config.vm.provision "file", source: 'C:/Users/Alejandro/Documents/Repositorios/Otto/otto-getting-started-deps/.otto/compiled/app/scriptpacks/STDLIB.tar.gz', destination: "#{dir}/STDLIB.tar.gz"
   config.vm.provision "shell", inline: "cd #{dir}; sudo mkdir STDLIB; sudo tar xzf STDLIB.tar.gz -C STDLIB"
   
-  config.vm.provision "file", source: "C:\Users\Alejandro\Documents\Repositorios\Otto\otto-getting-started-deps\.otto\compiled\app\scriptpacks\RUBY.tar.gz", destination: "#{dir}/RUBY.tar.gz"
+  config.vm.provision "file", source: 'C:/Users/Alejandro/Documents/Repositorios/Otto/otto-getting-started-deps/.otto/compiled/app/scriptpacks/RUBY.tar.gz', destination: "#{dir}/RUBY.tar.gz"
   config.vm.provision "shell", inline: "cd #{dir}; sudo mkdir RUBY; sudo tar xzf RUBY.tar.gz -C RUBY"
   
 
@@ -44,7 +44,7 @@ Vagrant.configure("2") do |config|
 
   
   dir = "/otto/foundation-layer-consul"
-  config.vm.synced_folder 'C:\Users\Alejandro\Documents\Repositorios\Otto\otto-getting-started-deps\.otto\compiled\app\foundation-consul\app-dev', dir
+  config.vm.synced_folder 'C:/Users/Alejandro/Documents/Repositorios/Otto/otto-getting-started-deps/.otto/compiled/app/foundation-consul/app-dev', dir
   config.vm.provision "shell", inline: "cd #{dir} && bash #{dir}/layer.sh"
 
 end
